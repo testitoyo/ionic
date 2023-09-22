@@ -34,14 +34,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-          cache: yarn
+          cache: npm
           cache-dependency-path: './package-lock.json'
           
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Install yarn
-        run: yarn add -G @ionic/cli
+        run: npm install -G @ionic/cli
 
       - name: run build
         run: ionic build --prod -- --base-href="https://testitoyo.github.io/ionic/"
