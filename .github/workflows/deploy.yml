@@ -42,7 +42,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: run build
+      - name: npm run build
         run: npm build --prod -- --base-href="https://testitoyo.github.io/ionic/"
         
       - name: Deploy
