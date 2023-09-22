@@ -41,12 +41,11 @@ jobs:
         run: yarn install
 
       - name: Install yarn
-        run: yarn add @ionic/cli
+        run: yarn add -G @ionic/cli
 
-      - name: run
+      - name: run build
         run: ionic build --prod -- --base-href="https://testitoyo.github.io/ionic/"
         
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
